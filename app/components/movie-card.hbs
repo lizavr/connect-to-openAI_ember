@@ -1,0 +1,8 @@
+{{! template-lint-disable no-invalid-interactive }}
+<div {{on "click" this.showModal}}>{{@movie.name}}</div>
+
+{{#if this.isModalVisible}}
+  <Popup @onClose={{this.hideModal}}>
+    <p>{{@movie.description}}</p>
+  </Popup>
+{{/if}}

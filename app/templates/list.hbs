@@ -1,0 +1,8 @@
+{{page-title "List"}}
+<div class="cursor-pointer">
+  <ul>
+    {{#each @model as |movie|}}
+      <li><MovieCard @movie={{movie}} /></li>
+    {{/each}}
+  </ul>
+</div>
