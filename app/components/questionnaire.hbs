@@ -1,0 +1,47 @@
+{{#if this.question}}
+  <h1
+    class="text-lg font-semibold text-gray-800 mb-2 cursor-default"
+  >Marvelous!</h1>
+  <h2 class="text-lg text-gray-800 mb-9 cursor-default">Now, please answer the
+    following questions!
+    <br />We can be a little closer 😏</h2>
+
+  <div
+    class="bg-amber-50 p-4 rounded-lg shadow-lg shadow-gray-300 w-[30rem] -mt-1"
+  >
+    <h2 class="text-xl mb-6">{{this.question.text}}</h2>
+    <ul>
+      {{#each this.question.options as |option|}}
+        <li>
+          <button
+            class="hover:text-gray-600 hover:font-bold"
+            type="button"
+            {{on "click" (fn this.answer option)}}
+          >{{option}}</button>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+{{else}}
+
+  {{#if this.movies.length}}
+    <ul class="h-[60vh] overflow-y-scroll custom-scrollbar">
+      {{#each this.movies as |movie|}}
+        <li mb-4>
+          <h1
+            class="text-lg font-semibold text-gray-800 mb-2 cursor-default"
+          >{{movie.name}} {{movie.year}} (rating: {{movie.rating}})</h1>
+          <p
+            class="text-lg text-gray-800 mb-9 cursor-default"
+          >{{movie.description}}</p>
+        </li>
+      {{/each}}
+    </ul>
+
+  {{else}}
+    <p {{did-insert this.askAi}}>
+      Thank you for your answers! We’re preparing recommendations for you...
+    </p>
+  {{/if}}
+
+{{/if}}

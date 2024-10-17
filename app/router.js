@@ -8,5 +8,5 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   this.route('list');
-  this.route('details');
+  this.route('questionnaire');
 });

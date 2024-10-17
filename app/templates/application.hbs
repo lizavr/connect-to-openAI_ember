@@ -1,27 +1,31 @@
 {{page-title "EmberList"}}
 <div class="bg-fuchsia-50 p-8 h-screen">
   <div class="container mx-auto px-4 text-sky-800">
-    <div class="mx-auto bg-white rounded-xl shadow-md p-6">
-      <div
-        class="flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-full mb-4"
-      >
-        <svg
-          class="w-6 h-6 text-indigo-500"
-          fill="currentColor"
-          viewBox="0 0 24 24"
+    <div class="mx-auto bg-white rounded-xl shadow-md p-20">
+      <div class="icon pl-28">
+        <div
+          class="flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-full mb-4"
         >
-          <path
-            d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM15.2366 6.74999H8.63664V8.16399H10.6171L7.30364 12.556L9.26311 14.556L12.5766 10.163L14.6171 12.163V10.749L11.3036 7.356L13.2366 5.356L15.2366 6.74999ZM14.6366 13.164L12.6171 15.164V13.749L14.6366 11.749V13.164ZM14.1366 16.556L10.8231 12.163L8.86364 14.163L10.8831 16.163L8.82364 17.556H14.1366V16.556Z"
-          />
-        </svg>
+          <svg
+            class="w-6 h-6 text-indigo-500"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM15.2366 6.74999H8.63664V8.16399H10.6171L7.30364 12.556L9.26311 14.556L12.5766 10.163L14.6171 12.163V10.749L11.3036 7.356L13.2366 5.356L15.2366 6.74999ZM14.6366 13.164L12.6171 15.164V13.749L14.6366 11.749V13.164ZM14.1366 16.556L10.8231 12.163L8.86364 14.163L10.8831 16.163L8.82364 17.556H14.1366V16.556Z"
+            />
+          </svg>
+        </div>
       </div>
-      <LinkTo @route="list">
-        <h1 class="text-lg font-semibold text-gray-800 mb-2">
-          List of movies
-        </h1>
-      </LinkTo>
-      {{outlet}}
-    </div>
+      <div class="flex justify-between h-[60vh]">
+        <div class="pl-28">
+          <Start />
+          {{outlet}}
+        </div>
 
+        <img class="max-w-[30%] h-1/2" alt="fox" src="fox.png" />
+
+      </div>
+    </div>
   </div>
 </div>

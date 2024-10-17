@@ -1,0 +1,12 @@
+{{#unless this.hasStarted}}
+  <h1 class="text-lg font-semibold text-gray-800 mb-2 cursor-default pb-8">
+    Hello! I’ll recommend a movie for you!
+    <br />Press start, and let’s go!
+  </h1>
+  <button
+    type="button"
+    {{on "click" this.start}}
+    class="px-12 py-6 font-bold text-white bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-400 hover:to-purple-600 animate-pulse rounded shadow-lg transition duration-300 ease-in-out"
+  >
+    Start</button>
+{{/unless}}
